@@ -100,16 +100,17 @@ function FormWithFile({ setChartState, setVariablesXY, data }) {
         arrayWithoutKeys.push(dataForCalculations[key][1]);
       }
 
+      console.log("=====> arrayWithoutKeys", arrayWithoutKeys);
       for (var i = 0; i < arrayWithoutKeys.length; i++) {
         let results1 = [];
-        for (var j = i+1; j < arrayWithoutKeys.length; j++) {
+        for (var j = i + 1; j < arrayWithoutKeys.length; j++) {
           results1.push(arrayWithoutKeys[i].slice(i, j));
           arr1d = [].concat(...results1);
         }
         results2.push(arr1d);
       }
 
-      console.log(results2, "resultados finales");
+      console.log("results2", results2);
       // aca tengo que ver una manera de agarrar una columna de
       // los arrayForCalculations y mandarlo a las funciones para
       // el problema es juntar todos lo datos en un mismo array
